@@ -430,9 +430,11 @@
         <span class="card-badge">Tableau · Data Storytelling</span>
         <h3>AI Job Market — The Future of Work</h3>
         <ul class="card-bullets">
-          <li>Three interactive dashboards, each designed for a different stakeholder: career changers, HR directors, and policymakers</li>
-          <li>Identified a 49.7% data quality contradiction via row-level Python check — corrected with a derived calculated field</li>
-          <li>Dynamic quadrant classification using WINDOW_AVG recalculates as filters change</li>
+          <li>A Tableau Story with three dashboards built from a single dataset, each reframing the data for a different audience: career changers, HR directors, and policymakers</li>
+          <li>Custom calculated fields to drive interactivity and dynamic filtering</li>
+          <li>Career Changers: find future-proof roles by salary, automation risk, and experience level</li>
+          <li>HR Directors: workforce planning and automation risk by role and industry</li>
+          <li>Policymakers: labour market outlook for Germany 2024–2030, with actionable reskilling recommendations</li>
         </ul>
         <div class="card-tags">
           <span class="tag">Tableau</span>
@@ -458,17 +460,21 @@
       <!-- Project 2 -->
       <div class="card">
         <span class="card-badge">Python · EDA · BigQuery</span>
-        <h3>Google Merch Store — Channel Performance Analysis</h3>
+        <h3>Google Merchandise Store — Marketing Channel Analysis</h3>
+        <p class="card-desc">Python/Jupyter Notebook EDA structured as a CMO-level briefing</p>
         <ul class="card-bullets">
-          <li>CMO-level briefing structured around a single business question: where should budget be reallocated?</li>
-          <li>Referral drives 40% of revenue from 12% of sessions; EMEA generates 170k sessions at 0.04% conversion — a structural barrier, not a channel problem</li>
-          <li>Permutation test (10,000 iterations) confirmed Display April spike as statistically extraordinary, not noise</li>
+          <li>Queried real GA360 data directly from BigQuery using a two-table extraction architecture separating session and hit grain</li>
+          <li>Classified and compared marketing channel performance across conversion and revenue metrics</li>
+          <li>Segmented traffic by region and analysed conversion behaviour across geographies</li>
+          <li>Tracked revenue per session over time to identify seasonal acquisition windows</li>
+          <li>Applied permutation testing to assess statistical significance of a low-volume channel anomaly</li>
         </ul>
         <div class="card-tags">
           <span class="tag">Python</span>
           <span class="tag">pandas</span>
+          <span class="tag">matplotlib</span>
+          <span class="tag">seaborn</span>
           <span class="tag">BigQuery</span>
-          <span class="tag">GA360</span>
         </div>
         <div class="card-links">
           <a href="https://github.com/Wilsbert12/google-merch-store-eda" target="_blank" class="card-link">
@@ -486,10 +492,13 @@
       <div class="card">
         <span class="card-badge">SQL · Relational Analysis</span>
         <h3>Olist E-Commerce — Customer Satisfaction Drivers</h3>
+        <p class="card-desc">SQL analysis of a real e-commerce relational database, structured as an operations team briefing</p>
         <ul class="card-bullets">
-          <li>Delivery promise accuracy (r = −0.315) outperforms total wait time as a predictor of review scores — customers respond to broken promises, not absolute delays</li>
-          <li>Satisfaction collapses at the first sign of lateness and flatlines — a threshold effect, not a linear relationship</li>
-          <li>126 sellers identified as consistently underperforming; within-state geographic variance far exceeds between-state, making city-level targeting the correct intervention unit</li>
+          <li>SQL analysis of a real star-schema relational database across 8 tables and ~100,000 orders</li>
+          <li>Data quality phase establishing null rates, join integrity, and delivery data completeness before any analysis</li>
+          <li>Tested four logistics metrics against review scores to identify the strongest predictor of customer satisfaction</li>
+          <li>Attributed delivery underperformance between sellers (dispatch speed) and carriers (transit time)</li>
+          <li>Decomposed geographic performance patterns across state, city, and zip code prefix granularity to identify the correct intervention level</li>
         </ul>
         <div class="card-tags">
           <span class="tag">SQL</span>
