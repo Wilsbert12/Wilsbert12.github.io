@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robert Wilson — Data Analyst</title>
+  <title>Data &amp; AI Portfolio — Robert Wilson</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -194,6 +194,17 @@
       transition: border-color 0.2s, transform 0.2s;
       position: relative;
       overflow: hidden;
+    }
+
+    .card-img {
+      display: block;
+      width: calc(100% + 4rem);
+      margin: -2rem -2rem 0 -2rem;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
     }
 
     .card-desc + .card-bullets {
@@ -430,6 +441,7 @@
 
       <!-- Project 1 -->
       <div class="card">
+        <img class="card-img" src="images/ai-job-market.png" alt="AI Job Market dashboard screenshot" onerror="this.style.display='none'">
         <span class="card-badge">Tableau · Data Storytelling</span>
         <h3>AI Job Market — The Future of Work</h3>
         <p class="card-desc">A Tableau Story with three dashboards built from a single dataset, each reframing the data for a different audience: career changers, HR directors, and policymakers</p>
@@ -462,6 +474,7 @@
 
       <!-- Project 2 -->
       <div class="card">
+        <img class="card-img" src="images/google-merch-eda.png" alt="Google Merchandise Store EDA screenshot" onerror="this.style.display='none'">
         <span class="card-badge">Python · EDA · BigQuery</span>
         <h3>Google Merchandise Store — Marketing Channel Analysis</h3>
         <p class="card-desc">Python/Jupyter Notebook EDA structured as a CMO-level briefing</p>
@@ -493,6 +506,7 @@
 
       <!-- Project 3 -->
       <div class="card">
+        <img class="card-img" src="images/olist-sql.png" alt="Olist SQL analysis screenshot" onerror="this.style.display='none'">
         <span class="card-badge">SQL · Relational Analysis</span>
         <h3>Olist E-Commerce — Customer Satisfaction Drivers</h3>
         <p class="card-desc">SQL analysis of a real e-commerce relational database, structured as an operations team briefing</p>
@@ -518,8 +532,10 @@
 
       <!-- Bootcamp Project 1 -->
       <div class="card">
+        <img class="card-img" src="images/rakuten-mlops.png" alt="Rakuten MLOps pipeline screenshot" onerror="this.style.display='none'">
         <span class="card-badge bootcamp">Data Science Bootcamp</span>
         <h3>Rakuten — MLOps Production Pipeline</h3>
+        <p class="card-desc">A production MLOps pipeline that classifies French e-commerce products into 27 categories — automating the full retraining cycle so the operations team never has to trigger it manually.</p>
         <ul class="card-bullets">
           <li>End-to-end MLOps pipeline with intelligent retraining triggers and drift monitoring</li>
           <li>Containerized microservice architecture deployed on Google Cloud Platform</li>
@@ -547,8 +563,10 @@
 
       <!-- Bootcamp Project 2 -->
       <div class="card">
+        <img class="card-img" src="images/rakuten-multimodal.png" alt="Rakuten multimodal classification screenshot" onerror="this.style.display='none'">
         <span class="card-badge bootcamp">Data Science Bootcamp</span>
         <h3>Rakuten — Multimodal Classification Ensemble</h3>
+        <p class="card-desc">A multimodal ensemble combining SVM, CamemBERT, and VGG16 that classifies 99K+ Rakuten products into 27 categories — achieving an F1 of 0.87, beating the official benchmark by 7.6%.</p>
         <ul class="card-bullets">
           <li>Multimodal ensemble combining classical ML, BERT, and VGG-16 for e-commerce product categorization</li>
           <li>Comprehensive feature engineering across text and image modalities</li>
