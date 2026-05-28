@@ -3,12 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data &amp; AI Portfolio — Robert Wilson</title>
-  <meta property="og:title" content="Data &amp; AI Portfolio — Robert Wilson" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wilsbert12.github.io/" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Data &amp; AI Portfolio — Robert Wilson" />
+  <title>Robert Wilson — Data Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -181,6 +176,46 @@
       line-height: 1.2;
     }
 
+    /* ── FEATURED CARD ── */
+    .card-featured {
+      background: var(--surface);
+      border: 1px solid var(--accent2);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-featured::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .card-featured-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .card-featured video {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .card-featured-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     /* ── PROJECT CARDS ── */
     .projects-grid {
       display: grid;
@@ -199,17 +234,6 @@
       transition: border-color 0.2s, transform 0.2s;
       position: relative;
       overflow: hidden;
-    }
-
-    .card-img {
-      display: block;
-      width: calc(100% + 4rem);
-      margin: -2rem -2rem 0 -2rem;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
-      border-radius: 8px 8px 0 0;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
     }
 
     .card-desc + .card-bullets {
@@ -423,11 +447,10 @@
 
   <!-- HERO -->
   <div class="hero">
-    <p class="hero-label">Data Analyst · Data Scientist · MLOps · Hamburg</p>
-    <h1>Turning data into<br /><em>business decisions</em></h1>
+    <p class="hero-label">Data Science · AI Engineering · Hamburg</p>
+    <h1>From raw data to<br /><em>deployed AI</em></h1>
     <p class="hero-differentiator">
-      <strong>I've been on the business side.</strong> That shapes how I approach data — 
-      not just what the numbers say, but what decision-makers actually need to act on them.
+      I build data and AI applications end to end — from the pipeline to the deployed product. Before moving into data and AI engineering, I spent 6.5 years in SaaS sales. That background shapes how I build — I think about the user and the decision first, then work backwards to the implementation.
     </p>
     <div class="hero-links">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -442,11 +465,56 @@
     <p class="section-label">Work</p>
     <h2 class="section-title">Portfolio Projects</h2>
 
+    <!-- Project 4 — Featured -->
+    <!-- Project 4 — Featured -->
+    <div class="card-featured">
+      <div class="card-featured-header">
+        <span class="card-badge">LangGraph · RAG · Chroma · FastAPI · Claude API · AWS · CI/CD</span>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);line-height:1.3;">Agentic Data Analysis Assistant</h3>
+      </div>
+      <video controls muted playsinline>
+        <source src="https://github.com/user-attachments/assets/7eb5faed-68f5-4a9b-ac05-7cf7c1aae539" type="video/mp4">
+      </video>
+      <div class="card-featured-body">
+        <p class="card-desc">A production-grade agentic data analyst, live on AWS, with Docker containerisation and GitHub Actions CI/CD. Upload one or more CSVs plus optional context files — data cards and schema diagrams — and ask business questions in plain English. The agent translates your question into SQL, executes it against your dataset, and returns answers grounded in actual query results. Built on LangGraph with a two-tier RAG memory architecture; past analyses are stored in a Chroma vector store and retrieved automatically for future questions.</p>
+        <ul class="card-bullets">
+          <li>Natural language to SQL — the agent translates questions, executes queries, and returns grounded answers</li>
+          <li>Schema confirmation loop — ambiguities, key relationships, and foreign keys flagged and resolved before any analysis begins</li>
+          <li>Two-tier RAG memory — past analyses stored in Chroma, retrieved via similarity search across sessions</li>
+          <li>Multimodal context input — upload data cards, data dictionaries, and schema diagrams alongside CSVs</li>
+          <li>Deployed on AWS App Runner with Docker containerisation and GitHub Actions CI/CD</li>
+          <li>Automated cost protection — budget threshold triggers an SNS kill switch to pause the service</li>
+        </ul>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Chroma</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Claude API</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Docker</span>
+          <span class="tag">AWS</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+        <div class="card-links">
+          <a href="https://wqp3pumgrq.eu-west-1.awsapprunner.com/" target="_blank" class="card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live App (AWS)
+          </a>
+          <a href="https://github.com/Wilsbert12/agentic-data-analyst" target="_blank" class="card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+
     <div class="projects-grid">
 
       <!-- Project 1 -->
       <div class="card">
-        <img class="card-img" src="images/ai-job-market.png" alt="AI Job Market dashboard screenshot" onerror="this.style.display='none'">
         <span class="card-badge">Tableau · Data Storytelling</span>
         <h3>AI Job Market — The Future of Work</h3>
         <p class="card-desc">A Tableau Story with three dashboards built from a single dataset, each reframing the data for a different audience: career changers, HR directors, and policymakers</p>
@@ -479,7 +547,6 @@
 
       <!-- Project 2 -->
       <div class="card">
-        <img class="card-img" src="images/google-merch-eda.png" alt="Google Merchandise Store EDA screenshot" onerror="this.style.display='none'">
         <span class="card-badge">Python · EDA · BigQuery</span>
         <h3>Google Merchandise Store — Marketing Channel Analysis</h3>
         <p class="card-desc">Python/Jupyter Notebook EDA structured as a CMO-level briefing</p>
@@ -511,7 +578,6 @@
 
       <!-- Project 3 -->
       <div class="card">
-        <img class="card-img" src="images/olist-sql.png" alt="Olist SQL analysis screenshot" onerror="this.style.display='none'">
         <span class="card-badge">SQL · Relational Analysis</span>
         <h3>Olist E-Commerce — Customer Satisfaction Drivers</h3>
         <p class="card-desc">SQL analysis of a real e-commerce relational database, structured as an operations team briefing</p>
@@ -537,10 +603,8 @@
 
       <!-- Bootcamp Project 1 -->
       <div class="card">
-        <img class="card-img" src="images/rakuten-mlops.png" alt="Rakuten MLOps pipeline screenshot" onerror="this.style.display='none'">
         <span class="card-badge bootcamp">Data Science Bootcamp</span>
         <h3>Rakuten — MLOps Production Pipeline</h3>
-        <p class="card-desc">A production MLOps pipeline that classifies French e-commerce products into 27 categories — automating the full retraining cycle so the operations team never has to trigger it manually.</p>
         <ul class="card-bullets">
           <li>End-to-end MLOps pipeline with intelligent retraining triggers and drift monitoring</li>
           <li>Containerized microservice architecture deployed on Google Cloud Platform</li>
@@ -568,10 +632,8 @@
 
       <!-- Bootcamp Project 2 -->
       <div class="card">
-        <img class="card-img" src="images/rakuten-multimodal.png" alt="Rakuten multimodal classification screenshot" onerror="this.style.display='none'">
         <span class="card-badge bootcamp">Data Science Bootcamp</span>
         <h3>Rakuten — Multimodal Classification Ensemble</h3>
-        <p class="card-desc">A multimodal ensemble combining SVM, CamemBERT, and VGG16 that classifies 99K+ Rakuten products into 27 categories — achieving an F1 of 0.87, beating the official benchmark by 7.6%.</p>
         <ul class="card-bullets">
           <li>Multimodal ensemble combining classical ML, BERT, and VGG-16 for e-commerce product categorization</li>
           <li>Comprehensive feature engineering across text and image modalities</li>
