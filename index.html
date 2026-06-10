@@ -346,6 +346,44 @@
     .card-link svg { width: 12px; height: 12px; }
 
     /* ── SKILLS ── */
+    .skills-focus {
+      margin-bottom: 2.5rem;
+    }
+
+    .skills-focus-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .skills-focus-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: var(--tag-bg);
+      color: var(--text);
+      font-size: 0.85rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-weight: 400;
+    }
+
+    .skills-further-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -357,7 +395,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--muted);
       margin-bottom: 0.8rem;
     }
 
@@ -369,7 +407,7 @@
     }
 
     .skill-group li {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--muted);
     }
 
@@ -667,55 +705,55 @@
   <section id="skills">
     <p class="section-label">Capabilities</p>
     <h2 class="section-title">Skills & Tools</h2>
+
+    <!-- Focus Stack -->
+    <div class="skills-focus">
+      <p class="skills-focus-label">Focus Stack</p>
+      <div class="skills-focus-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">Chroma</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">Tableau</span>
+      </div>
+    </div>
+
+    <!-- Further Tools -->
+    <p class="skills-further-label">Further Tools</p>
     <div class="skills-grid">
       <div class="skill-group">
-        <h4>Visualisation</h4>
+        <h4>Data Science & ML</h4>
         <ul>
-          <li>Tableau</li>
+          <li>pandas</li>
+          <li>NumPy</li>
+          <li>scikit-learn</li>
+          <li>PyTorch</li>
+          <li>TensorFlow</li>
           <li>matplotlib</li>
           <li>seaborn</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h4>Languages</h4>
-        <ul>
-          <li>SQL</li>
-          <li>Python</li>
         </ul>
       </div>
       <div class="skill-group">
         <h4>Data & Cloud</h4>
         <ul>
           <li>BigQuery</li>
+          <li>PostgreSQL</li>
           <li>SQLite</li>
-          <li>Google Cloud Platform</li>
+          <li>GCP</li>
         </ul>
       </div>
       <div class="skill-group">
-        <h4>Python Libraries</h4>
+        <h4>MLOps & Monitoring</h4>
         <ul>
-          <li>pandas</li>
-          <li>PyTorch</li>
-          <li>Scikit-learn</li>
           <li>MLflow</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h4>MLOps</h4>
-        <ul>
           <li>Airflow</li>
-          <li>Docker</li>
           <li>Prometheus</li>
           <li>Grafana</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h4>Environments</h4>
-        <ul>
-          <li>Jupyter / Colab</li>
-          <li>VS Code</li>
-          <li>GitHub</li>
-          <li>Kaggle</li>
         </ul>
       </div>
     </div>
